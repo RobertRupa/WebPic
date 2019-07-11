@@ -26,6 +26,10 @@ footer {
     margin-top: 30px;
 }
 
+table.dataTable {
+    width: 100%!important;
+}
+
 .table img {
     max-width: 100px;
 }

@@ -44,7 +44,7 @@
           <small id="uniqueIDHelp" class="form-text text-muted"><?php echo __('Enter a valid unique ID.') ?></small>
         </div>
         <div class="form-group">
-          <label for="limit"><?php echo __("Limit filest to show") ?></label>
+          <label for="limit"><?php echo __("Limit files to show") ?></label>
           <input type="number" class="form-control" id="number" value="2">
         </div>
         <div class="form-check">

@@ -70,7 +70,7 @@ msgstr "Id"
 msgid "Img Alt"
 msgstr "Alt pliku"
 
-msgid "Limit filest to show"
+msgid "Limit files to show"
 msgstr "Limit plików do wyświetlenia"
 
 msgid "List"
@@ -147,6 +147,9 @@ msgstr "Widok"
 
 msgid "Welcome"
 msgstr "Witaj"
+
+msgid "You are not authorized to view this part of this website."
+msgstr "Nie jesteś uprawniony do tej części strony".
 
 msgid "You can upload multiple files by drag & drop or click on dropzone to chose an image."
 msgstr "Możesz uploadadować wiele plików przeciągająć je na miejce uloadu."
