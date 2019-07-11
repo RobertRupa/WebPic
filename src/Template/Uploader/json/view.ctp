@@ -9,7 +9,7 @@ else {
     $file_single->url = "https://" . $_SERVER['SERVER_NAME'].$file_single->url;
     $files[] = $file_single;
   }
-  echo json_encode($files);
+  echo json_encode($file);
   return;
 }
 echo json_encode($file);

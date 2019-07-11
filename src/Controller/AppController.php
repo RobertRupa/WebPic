@@ -16,6 +16,8 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\I18n\I18n;
+
 
 /**
  * Application Controller
@@ -45,11 +47,36 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+             // If unauthorized, return them to page they were just on
+            'unauthorizedRedirect' => $this->referer()
+        ]);
 
+        // Allow the display action
+        $this->Auth->allow(['list', 'product']);
+        if(isset($this->Auth->user()['locale']) && $this->Auth->user()['locale']){
+            I18n::setLocale($this->Auth->user()['locale']);
+        }
         /*
          * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+    }
+
+    public function beforeRender(Event $event) {
+        $this->set('userData', $this->Auth->user());
     }
 }

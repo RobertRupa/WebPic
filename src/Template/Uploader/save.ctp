@@ -6,14 +6,14 @@
 <?= $this->Html->script('jquery/jquery.dataTables.min.js') ?>
 <?= $this->Html->script('bootstrap/dataTables.bootstrap4.min.js') ?>
 
-<h1>List of saved files:</h1>
+<h1><?php echo __('List of saved files'); ?>:</h1>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Unique ID</th>
-      <th scope="col">Created</th>
-      <th scope="col">Additional information</th>
-      <th scope="col">Preview</th>
+      <th scope="col"><?php echo __('Unique ID'); ?></th>
+      <th scope="col"><?php echo __('Created'); ?></th>
+      <th scope="col"><?php echo __('Additional information'); ?></th>
+      <th scope="col"><?php echo __('Preview'); ?></th>
     </tr>
   </thead>
   <?php foreach ($uploadedFiles as $file): ?>
@@ -46,6 +46,10 @@
 </table>
 <script>
 $(document).ready(function() {
-    $('.table').DataTable();
+    $('.table').DataTable({
+            "language": {
+                "url": "/js/bootstrap/dataTables.Polish.json"
+            }
+        });
 } );
 </script>

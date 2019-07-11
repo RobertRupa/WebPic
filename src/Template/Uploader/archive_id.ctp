@@ -6,11 +6,11 @@
 <?= $this->Html->script('jquery/jquery.dataTables.min.js') ?>
 <?= $this->Html->script('bootstrap/dataTables.bootstrap4.min.js') ?>
 
-<h1>list of all files</h1>
+<h1><?php echo __('List of files with unique ID') ?></h1>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Unique ID</th>
+      <th scope="col"><?= __("Unique ID") ?></th>
     </tr>
   </thead>
   <?php foreach ($uploader as $file): ?>
@@ -22,6 +22,10 @@
 </table>
 <script>
 $(document).ready(function() {
-    $('.table').DataTable();
+    $('.table').DataTable({
+            "language": {
+                "url": "/js/bootstrap/dataTables.Polish.json"
+            }
+        });
 } );
 </script>

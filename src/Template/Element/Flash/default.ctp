@@ -1,5 +1,5 @@
 <?php
-$class = 'message';
+$class = 'alert alert-dismissible';
 if (!empty($params['class'])) {
     $class .= ' ' . $params['class'];
 }

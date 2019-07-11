@@ -1,0 +1,137 @@
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Add new"
+msgstr "Add new"
+
+msgid "Add User"
+msgstr "Add User"
+
+msgid "Additional information"
+msgstr "Additional information"
+
+msgid "After save old images with the same name and same unique ID will be moved to Archive and actual files will take their places."
+msgstr "After save old images with the same name and same unique ID will be moved to Archive and actual files will take their places."
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Archive - all files"
+msgstr "Archive - all files"
+
+msgid "Archive - unique IDs"
+msgstr "Archive - unique IDs"
+
+msgid "Copied to clipboard"
+msgstr "Copied to clipboard"
+
+msgid "Copy to clipboard"
+msgstr "Copy to clipboard"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Enter a valid product SKU."
+msgstr "Enter a valid product SKU."
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Documentation"
+msgstr "Documentation"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Edit User"
+msgstr "Edit User"
+
+msgid "email"
+msgstr "email"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Files"
+msgstr "Files"
+
+msgid "Files with the same name will be repleaced in dropzone."
+msgstr "Files with the same name will be repleaced in dropzone."
+
+msgid "Id"
+msgstr "Id"
+
+msgid "Img Alt"
+msgstr "Img Alt"
+
+msgid "List"
+msgstr "List"
+
+msgid "List of all files"
+msgstr "List of all files"
+
+msgid "List of files with unique ID"
+msgstr "List of files with unique ID"
+
+msgid "List of saved files"
+msgstr "List of saved files"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Login form"
+msgstr "Login form"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Modified"
+msgstr "Modified"
+
+msgid "modified"
+msgstr "modified"
+
+msgid "New upload"
+msgstr "New upload"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "password"
+msgstr "password"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Submit"
+msgstr "Submit"
+
+msgid "Search by SKU"
+msgstr "Search by SKU"
+
+msgid "Show additionally old files"
+msgstr "Show additionally old files"
+
+msgid "Unique ID"
+msgstr "Unique ID"
+
+msgid "Users"
+msgstr "Users"
+
+msgid "username"
+msgstr "username"
+
+msgid "Uploader"
+msgstr "Uploader"
+
+msgid "View"
+msgstr "View"
+
+msgid "Welcome"
+msgstr "Welcome"
+
+msgid "You can upload multiple files by drag & drop or click on dropzone to chose an image."
+msgstr "You can upload multiple multiple files by drag & drop or click on dropzone to chose an image."

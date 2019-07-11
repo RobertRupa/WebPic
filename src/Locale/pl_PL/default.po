@@ -1,0 +1,152 @@
+msgid "Actions"
+msgstr "Akcje"
+
+msgid "Add new"
+msgstr "Dodaj nowy"
+
+msgid "Add User"
+msgstr "Nowy Użytkownik"
+
+msgid "Additional information"
+msgstr "Dodatkowe informacje"
+
+msgid "Admin"
+msgstr "Administrator"
+
+msgid "After save old images with the same name and same unique ID will be moved to Archive and actual files will take their places."
+msgstr "Po zapisaniu, stary plik z tą samą nazwą i tym samym unikalnym id, będzie przeniesiony do archiwum. Aktualny plik zajmie miejsce starego pliku"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Archive - all files"
+msgstr "Archiwum - wszystkie pliki"
+
+msgid "Archive - unique IDs"
+msgstr "Archiwum - unikalne id"
+
+msgid "Copied to clipboard"
+msgstr "Skopiowano do showka"
+
+msgid "Copy to clipboard"
+msgstr "Skopiuj do schowka"
+
+msgid "Created"
+msgstr "Utworzono"
+
+msgid "Creation Date"
+msgstr "Data Utworzenia"
+
+msgid "Enter a valid unique ID."
+msgstr "Wprowadź prawidłowy unikalny ID."
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Documentation"
+msgstr "Dokumentacja"
+
+msgid "Edit"
+msgstr "Edycja"
+
+msgid "Edit User"
+msgstr "Edycja Użytkownika"
+
+msgid "email"
+msgstr "Email"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Files"
+msgstr "Pliki"
+
+msgid "Files with the same name will be repleaced in dropzone."
+msgstr "Pliki o tej samej nazwie będą kolejno zastępowane."
+
+msgid "Id"
+msgstr "Id"
+
+msgid "Img Alt"
+msgstr "Alt pliku"
+
+msgid "Limit filest to show"
+msgstr "Limit plików do wyświetlenia"
+
+msgid "List"
+msgstr "Lista"
+
+msgid "List of all files"
+msgstr "Lista wszystkich plików"
+
+msgid "List of files with unique ID"
+msgstr "Lista wszystkich plików z unikalnym ID"
+
+msgid "List of saved files"
+msgstr "Lista zapisanych plików"
+
+msgid "Locale"
+msgstr "Język"
+
+msgid "Login"
+msgstr "Zaloguj"
+
+msgid "Sign in"
+msgstr "Zaloguj się"
+
+msgid "Logout"
+msgstr "Wyloguj"
+
+msgid "Modified"
+msgstr "Zmodyfikowano"
+
+msgid "modified"
+msgstr "zmodyfikowano"
+
+msgid "New upload"
+msgstr "Nowy upload"
+
+msgid "Preview"
+msgstr "Podgląd"
+
+msgid "Password"
+msgstr "Hasło"
+
+msgid "Role"
+msgstr "Rola"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "Submit"
+msgstr "Wyślij"
+
+msgid "Search by Unique ID"
+msgstr "Szukaj po unikalnym ID"
+
+msgid "Show additionally old files"
+msgstr "Pokaż dodatkowo archiwalne pliki"
+
+msgid "Unique ID"
+msgstr "Unikalny ID"
+
+msgid "User"
+msgstr "Użytkownik"
+
+msgid "Users"
+msgstr "Użytkownicy"
+
+msgid "username"
+msgstr "Nazwa użytkownika"
+
+msgid "Uploader"
+msgstr "Uploader"
+
+msgid "View"
+msgstr "Widok"
+
+msgid "Welcome"
+msgstr "Witaj"
+
+msgid "You can upload multiple files by drag & drop or click on dropzone to chose an image."
+msgstr "Możesz uploadadować wiele plików przeciągająć je na miejce uloadu."

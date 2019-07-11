@@ -2,3 +2,30 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+.nav-item.dropdown.user {
+    display: inline-flex;
+}
+
+.nav-item.dropdown.user a {
+    padding-left: 5px;
+}
+
+.nav-item.dropdown>span {
+    display: block;
+    padding: 0.5rem 0rem;
+    color: #fff;
+}
+
+.input.text {
+    margin-bottom: 15px;
+}
+
+.tab-content {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.table img {
+    max-width: 100px;
+}

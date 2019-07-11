@@ -13,10 +13,11 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Images for Olimp Laboratories webpages';
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +40,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Olimp?</a>
+<?php if(isset($userData['id']) && $userData['id']): ?>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">WebPics</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -52,33 +54,60 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       </li> -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Uploader
+        <?php echo __('Uploader'); ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/uploader">New upload</a>
+          <a class="dropdown-item" href="/uploader"><?php echo __('New upload'); ?></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/uploader/archive-all">Archive - all files</a>
-          <a class="dropdown-item" href="/uploader/archive-id">Archive - unique IDs</a>
+          <a class="dropdown-item" href="/uploader/archive-all"><?php echo __('Archive - all files'); ?></a>
+          <a class="dropdown-item" href="/uploader/archive-id"><?php echo __('Archive - unique IDs'); ?></a>
         </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        API
+        <?php echo __('Users'); ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/uploader/demo">Demo</a>
+          <a class="dropdown-item" href="/users"><?php echo __('List'); ?></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/uploader/api">Documentation</a>
+          <a class="dropdown-item" href="/users/add"><?php echo __('Add new'); ?></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <?php echo __('API'); ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/uploader/api"><?php echo __('Documentation'); ?></a>
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <div class="nav-item dropdown user"><span><?php echo __('Welcome'); ?> </span>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <?= $userData['username'] ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/users/edit/<?= $userData['id'] ?>"><?php echo __('Edit'); ?></a>
+          <a class="dropdown-item" href="/users/logout"><?php echo __('Logout'); ?></a>
+        </div>
+      </div>
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
   </div>
 </nav>
-  
+<?php else: ?> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">WebPics</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="nav-link" href="/users/login"><?= __("Login"); ?></a>
+  </div>
+</nav>
+<?php endif; ?> 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

@@ -6,8 +6,10 @@ use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Network\Exception\NotFoundException;
 use App\Controller\QueryExpression;
 use App\Controller\Query;
+
 class UploaderController extends AppController
 {
+    
     public function index()
     {
         //$this->loadComponent('Paginator');
@@ -55,7 +57,7 @@ class UploaderController extends AppController
                     $newDir = WWW_ROOT.'upload/'.$fileToArchive->id.'/';
                     mkdir($newDir);
                     if (!copy ($targetFile, $newDir.$file->fileName)) {
-                        echo "failed to copy ".$targetFile."...\n";
+                        $this->Flash->error('failed to copy '.$targetFile.'...\n');
                     }
                     else {
                         $fileToArchive->url = '/upload/'.$fileToArchive->id.'/'.$file->fileName;
@@ -63,12 +65,12 @@ class UploaderController extends AppController
                         unlink($targetFile);
                     }
                 } catch (RecordNotFoundException $e) {
-
+                    $this->Flash->error($e);
                 }
             }
             if(file_exists($sourceFile) ){
                 if (!copy ($sourceFile, $targetFile)) {
-                    echo "failed to copy ".$sourceFile."...\n";
+                    $this->Flash->error('failed to copy '.$sourceFile.'...\n');
                 }
                 else {
                     unlink($sourceFile);
@@ -86,6 +88,8 @@ class UploaderController extends AppController
         }
 
         $this->set(compact('uploadedFiles'));
+
+        $this->Flash->success('File saved successfully for '.$newUpload->unique_id);
     }
     public function archiveAll()
     {
@@ -112,31 +116,6 @@ class UploaderController extends AppController
             $this->set(compact('file'));
             return;
         }
-        $unique_id = $this->request->getQuery('unique_id');
-        $filename = $this->request->getQuery('filename');
-        $limit = $this->request->getQuery('limit');
-        $all = $this->request->getQuery('all');
-        $file = [];
-        $files = $this->Uploader->find('all', [
-            'order' => ['id' => 'DESC']
-        ])->where([
-            'url LIKE' => '%'.$filename,
-            'unique_id' => $unique_id
-        ])->distinct(['url'])
-        ->limit($limit);
-        if($all!=1){
-            foreach($files as $singleFile){
-                $path = explode("/", $singleFile->url);
-                if(count($path) < 4){
-                    $file[] = $singleFile;
-                }
-            }
-        }
-        else{
-            $file = $files;
-        }
-        //var_dump($file);
-        $this->set(compact('file'));
     }
 
     public function viewUniqueId($unique_id = null)
@@ -158,19 +137,5 @@ class UploaderController extends AppController
             return $this->redirect(['action' => $action]);
         }
     }
-    public function demo()
-    {
-        $demo = '';
-        if ($this->request->is('post')) {
-            if(!empty($this->request->getData('unique_id'))){
-                $demo = $this->Uploader->find('all', [
-                    'order' => ['id' => 'DESC']
-                ])->where(['unique_id =' => $this->request->getData('unique_id')]);
-            }
-        }
-        $this->set(compact('demo'));
-    }
-    public function api()
-    {
-    }
+    public function api() {}
 }
